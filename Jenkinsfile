@@ -2,6 +2,10 @@ pipeline {
     agent {
         label 'ssh-agent' // Replace with your agent's label
     }
+    tools
+    {
+    jdk 'jdk-24'
+    }
     
     environment {
         MAVEN_HOME = '/opt/maven'  // Set this to your Maven installation path
