@@ -11,7 +11,7 @@ pipeline {
     stages{
         stage('checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/demo-deploy']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/Keerthansimha/CRUDProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/testing']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/Keerthansimha/CRUDProject.git']]])
             }
         }
 
