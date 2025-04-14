@@ -3,7 +3,7 @@ pipeline {
         label 'ssh-agent' // Replace with your agent's label
     }
     tools {
-        jdk 'java'
+        jdk 'jdk-24'
     }
     
     environment {
