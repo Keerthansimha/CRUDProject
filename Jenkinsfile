@@ -21,7 +21,7 @@ pipeline {
         stage('Build Project') {
             steps {
                 echo 'Building the project using Maven...'
-                sh 'mvn clean package -X' // Includes clean to ensure a fresh build
+                sh 'mvn clean package' // Includes clean to ensure a fresh build
             }
         }
 
