@@ -24,18 +24,6 @@ pipeline {
                 sh 'mvn clean package' // Includes clean to ensure a fresh build
             }
         }
-
-        stage('Test') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn test'
-                    } else {
-                        bat 'mvn test'
-                    }
-                }
-            }
-        }
     }
     
     post {
