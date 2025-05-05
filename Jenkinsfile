@@ -18,6 +18,13 @@ pipeline {
             }
         }
 
+        stage('Clean') {
+            steps {
+                echo 'Cleaning the project workspace using Maven...'
+                sh 'mvn clean'
+            }
+        }
+
         stage('Build Project') {
             steps {
                 echo 'Building the project using Maven...'
