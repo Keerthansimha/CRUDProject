@@ -76,18 +76,13 @@ pipeline {
     
     post {
         always {
-            echo 'Pipeline execution completed. Cleaning up...'
-            cleanWs() // Clean workspace after build
+            echo 'Pipeline execution completed.'
         }
         success {
-            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            echo 'Build successful! Artifacts archived.'
+            echo 'Pipeline executed successfully.'
         }
         failure {
             echo 'Pipeline failed. Check logs for details.'
-            mail to: 'team@example.com',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Check build ${env.BUILD_URL}"
         }
     }
 }
