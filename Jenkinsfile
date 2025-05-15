@@ -11,7 +11,7 @@ pipeline {
     environment {
         // Java/Maven setup
         JAVA_HOME = '/opt/jdk-24'
-        MAVEN_HOME = '/opt/maven'
+        MAVEN_HOME = '/opt/apache-maven-3.9.9'
         PATH = "${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${env.PATH}"
         
         // Database configuration (using Jenkins credentials)
