@@ -15,7 +15,7 @@ pipeline {
         PATH = "${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${env.PATH}"
         
         // Database configuration (using Jenkins credentials)
-        DB_HOST = 'your-mysql-host' // Replace with your MySQL server IP/hostname
+        DB_HOST = '18.208.215.73' // Replace with your MySQL server IP/hostname
         DB_PORT = '3306'
         DB_NAME = 'employee_directory'
         DB_URL = "jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false&serverTimezone=UTC"
