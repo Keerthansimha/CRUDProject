@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ssh-agent'
+        label 'sonarqube'
     }
     
     options {
